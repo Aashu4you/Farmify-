@@ -1,111 +1,147 @@
-/* styles.css */
-
+/* Base styles */
 body {
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
-    margin: 0;
-    padding: 0;
-    background-color: #4caf50;
-    color: #333;
-  }
-  
-  header {
-    background-color: #0c4b0c;
-    color: rgb(247, 241, 241);
-    padding: 10px 20px;
-  }
-  
-  .header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-weight: bolder;
-  }
-  
-  main {
-    padding: 20px;
-  }
-  
-  h2 {
-    color: #0c0c0c;
-  }
-  
-  .weather-card, .hourly-forecast .hour, .weekly-forecast .day, .map-placeholder, .graph {
-    background: #e7f3e8;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin: 10px 0;
-  }
-  
-  .weather-card {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .temperature {
-    font-size: 3em;
-    font-weight: bold;
-  }
-  
-  .details span {
-    display: block;
-    margin-top: 5px;
-    font-weight: bold;
-  }
-  
-  .hourly-forecast .forecast-scroll {
-    display: flex;
-    overflow-x: auto;
-  }
-  
-  .hourly-forecast .hour {
-    flex: 0 0 200px;
-    text-align: center;
-    margin: 5px;
-    font-weight: 700;
-  }
-  
-  .weekly-forecast .week {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    font-weight: 700;
-  }
-  
-  .weekly-forecast .day {
-    flex: 1 0 30%;
-    text-align: center;
-  }
-  
-  .map-placeholder {
-    text-align: center;
-    font-size: 1.2em;
-    color: #666;
-    height: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .historical-trends .graphs {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .historical-trends .graph {
-    flex: 1;
-    height: 150px;
-    text-align: center;
-    line-height: 150px;
-    font-size: 1.2em;
-    color: #666;
-  }
-  
-  footer {
-    text-align: center;
-    background-color: #0c4b0c;
-    color: rgb(247, 241, 241);
-    padding: 10px;
-  }
-  
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f8f5;
+  color: #333;
+}
+
+/* Header */
+header {
+  background-color: #065a1e;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.header-container h1 {
+  margin: 0;
+  font-size: 1.8em;
+}
+
+.location span {
+  display: block;
+  font-size: 1em;
+  margin-top: 5px;
+}
+
+/* Main Section */
+main {
+  padding: 20px;
+}
+
+/* Section Titles */
+h2 {
+  color: #065a1e;
+  margin-bottom: 10px;
+}
+
+/* Weather Card */
+.weather-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.temperature {
+  font-size: 3em;
+  font-weight: bold;
+}
+
+.weather-icon {
+  width: 70px;
+  height: auto;
+}
+
+/* Weather Details */
+.details span {
+  display: block;
+  margin-top: 8px;
+  font-size: 1.1em;
+}
+
+/* Hourly Forecast */
+.hourly-forecast .forecast-scroll {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 15px;
+  padding: 10px;
+}
+
+.hourly-forecast .hour {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  min-width: 150px;
+  text-align: center;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+/* Weekly Forecast */
+.weekly-forecast .week {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.weekly-forecast .day {
+  flex: 1 0 30%;
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+}
+
+/* Weather Map */
+.map-placeholder {
+  background-color: #fff;
+  border: 2px dashed #ccc;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.2em;
+  color: #666;
+}
+
+/* Historical Trends */
+.historical-trends .graphs {
+  display: flex;
+  gap: 15px;
+}
+
+.historical-trends .graph {
+  flex: 1;
+  height: 200px;
+  background: #fff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2em;
+  color: #666;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background-color: #065a1e;
+  color: #fff;
+  padding: 15px 0;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+}

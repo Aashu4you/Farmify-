@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Farm Weather Dashboard</title>
   <link rel="stylesheet" href="weather.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="weather.js" defer></script>
 </head>
 <body>
   <header>
@@ -97,17 +99,25 @@
     <!-- Weather Map Section -->
     <section class="weather-map">
       <h2>Interactive Weather Map</h2>
-      <div class="map-placeholder">
-        <span>Map with Rainfall & Temperature Overlays</span>
-      </div>
+      <iframe
+        src="https://embed.windy.com/embed2.html?lat=23.2599&lon=77.4126&zoom=5&level=surface&overlay=rain&menu=&message=true&marker=true&calendar=&pressure=&type=map&location=coordinates&detail=&detailLat=23.2599&detailLon=77.4126&metricWind=default&metricTemp=default&radarRange=-1"
+        width="100%"
+        height="300px"
+        frameborder="0"
+        style="border-radius: 8px;">
+      </iframe>
     </section>
 
     <!-- Historical Trends Section -->
     <section class="historical-trends">
       <h2>Historical Weather Trends</h2>
       <div class="graphs">
-        <div class="graph">☔︎︎ Rainfall Trends</div>
-        <div class="graph">🌡️ Temperature Trends</div>
+        <div class="graph">
+          <canvas id="rainfallChart"></canvas>
+        </div>
+        <div class="graph">
+          <canvas id="temperatureChart"></canvas>
+        </div>
       </div>
     </section>
   </main>
@@ -117,5 +127,37 @@
       <p>Powered by OpenWeatherMap</p>
     </div>
   </footer>
+
+  <script>
+    // Rainfall Chart
+    const ctx1 = document.getElementById('rainfallChart').getContext('2d');
+    new Chart(ctx1, {
+      type: 'line',
+      data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        datasets: [{
+          label: 'Rainfall (mm)',
+          data: [30, 50, 40, 60, 80, 120, 150, 180, 100, 60, 40, 30],
+          borderColor: '#4caf50',
+          fill: false
+        }]
+      }
+    });
+
+    // Temperature Chart
+    const ctx2 = document.getElementById('temperatureChart').getContext('2d');
+    new Chart(ctx2, {
+      type: 'line',
+      data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        datasets: [{
+          label: 'Temperature (°C)',
+          data: [18, 20, 25, 30, 35, 40, 38, 36, 32, 28, 24, 20],
+          borderColor: '#ff5722',
+          fill: false
+        }]
+      }
+    });
+  </script>
 </body>
 </html>
