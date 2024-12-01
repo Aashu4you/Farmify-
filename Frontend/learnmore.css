@@ -3,202 +3,201 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  /* Body */
-  body {
+}
+
+/* Body */
+body {
     font-family: Arial, sans-serif;
     background-color: #f9f9f9;
     color: #333;
-  }
-  
-  /* Header */
-  header {
+}
+
+/* Header */
+header {
     background-color: #006400;
     padding: 20px 0;
     color: white;
-  }
-  
-  .navbar {
+}
+
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-  }
-  
-  .navbar .logo img {
+}
+
+.navbar .logo img {
     height: 50px;
-  }
-  
-  nav ul {
+}
+
+nav ul {
     list-style: none;
     display: flex;
-  }
-  
-  nav ul li {
+}
+
+nav ul li {
     margin: 0 15px;
-  }
-  
-  nav ul li a {
+}
+
+nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-  }
-  
-  .cta-button {
+}
+
+.cta-button {
     background-color: #28a745;
     color: white;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
-  }
-  
-  .cta-button:hover {
+}
+
+.cta-button:hover {
     background-color: #218838;
-  }
-  
-  /* Hero Section */
-  .hero {
+}
+
+/* Hero Section */
+.hero {
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: #e6f7e6;
     padding: 80px 20px;
-  }
-  
-  .hero .hero-content {
+}
+
+.hero .hero-content {
     max-width: 50%;
-  }
-  
-  .hero .hero-content h1 {
+}
+
+.hero .hero-content h1 {
     font-size: 3rem;
     margin-bottom: 20px;
-  }
-  
-  .hero .hero-content p {
+}
+
+.hero .hero-content p {
     font-size: 1.2rem;
     margin-bottom: 30px;
-  }
-  
-  .hero .hero-image img {
+}
+
+.hero .hero-image img {
     width: 70%;
     max-height: 400px;
     object-fit: cover;
-  }
-  
-  .hero .home-button {
+}
+
+.hero .home-button {
     background-color: #28a745; /* Green color */
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
     color: white;
-  }
-  
-  .hero .home-button:hover {
+}
+
+.hero .home-button:hover {
     background-color: #218838;
-  }
-  
-  /* Why Choose Section */
-  .why-choose {
+}
+
+/* Why Choose Section */
+.why-choose {
     padding: 60px 20px;
     background-color: #ffffff;
-  }
-  
-  .why-choose .container {
+}
+
+.why-choose .container {
     text-align: center;
-  }
-  
-  .why-choose h2 {
+}
+
+.why-choose h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
-  }
-  
-  .why-choose p {
+}
+
+.why-choose p {
     font-size: 1.2rem;
     margin-bottom: 40px;
-  }
-  
-  .features {
+}
+
+.features {
     display: flex;
     justify-content: space-between;
     gap: 30px;
     margin-top: 40px;
-  }
-  
-  .feature {
+}
+
+.feature {
     text-align: center;
     width: 30%;
-  }
-  
-  .feature-icon {
+}
+
+.feature-icon {
     width: 80px;
     margin-bottom: 15px;
-  }
-  
-  .feature h3 {
+}
+
+.feature h3 {
     font-size: 1.5rem;
     margin-bottom: 10px;
-  }
-  
-  .feature p {
+}
+
+.feature p {
     font-size: 1rem;
-  }
-  
-  /* Services Section */
-  .services {
+}
+
+/* Services Section */
+.services {
     background-color: #f1f1f1;
     padding: 60px 20px;
-  }
-  
-  .services .container {
+}
+
+.services .container {
     text-align: center;
-  }
-  
-  .services h2 {
+}
+
+.services h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
-  }
-  
-  .services p {
+}
+
+.services p {
     font-size: 1.2rem;
     margin-bottom: 40px;
-  }
-  
-  .service-cards {
+}
+
+.service-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     padding: 20px;
-  }
-  
-  .service-card {
+}
+
+.service-card {
     background-color: white;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .service-card h3 {
+}
+
+.service-card h3 {
     font-size: 1.8rem;
     margin-bottom: 10px;
-  }
-  
-  .service-card p {
+}
+
+.service-card p {
     font-size: 1rem;
     color: #555;
-  }
-  
-  /* Footer */
-  footer {
+}
+
+/* Footer */
+footer {
     background-color: #006400;
     padding: 20px 0;
     text-align: center;
     color: white;
-  }
-  
-  footer p {
+}
+
+footer p {
     font-size: 1rem;
-  }
-  
+}
