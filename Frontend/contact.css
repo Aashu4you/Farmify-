@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box; /* Ensure padding and border are included in element's total width and height */
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* Set a clean font */
+    background: linear-gradient(135deg, #4caf50, #2c6a4f, #81c784); /* Gradient background */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+.container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+    opacity: 0; /* Start with opacity 0 for fade-in effect */
+    animation: fadeIn 1s forwards; /* Fade-in animation */
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1; /* End with full opacity */
+    }
+}
+
+.form-container {
+    background-color: white; /* White background for the form */
+    padding: 40px; /* Increased padding for a larger form container */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    width: 600px; /* Increased width for a larger form container */
+    transform: translateY(-20px); /* Start slightly above */
+    animation: slideIn 0.5s forwards; /* Slide-in animation */
+}
+
+@keyframes slideIn {
+    to {
+        transform: translateY(0); /* End at original position */
+    }
+}
+
+
+h1 {
+    text-align: center; /* Center the heading */
+    color: #333; /* Dark text color */
+}
+
+p {
+    text-align: center; /* Center the paragraph */
+    color: #666; /* Lighter text color */
+}
+
+.contact-form {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+}
+
+.form-group {
+    margin-bottom: 15px; /* Space between form groups */
+}
+
+label {
+    margin-bottom: 5px; /* Space between label and input */
+    color: #333; /* Dark text color */
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding inside inputs */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 4px; /* Rounded corners */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition for border color and shadow */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #4CAF50; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5); /* Add shadow on focus */
+    transform: scale(1.02); /* Slightly enlarge input on focus */
+    transition: transform 0.3s; /* Smooth transition for scale */
+}
+
+.submit-button {
+    padding: 10px; /* Padding inside button */
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for background color and scale */
+    margin-top: 10px; /* Space above the button */
+}
+
+.submit-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
