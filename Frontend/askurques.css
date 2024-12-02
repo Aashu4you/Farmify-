@@ -1,0 +1,134 @@
+/* General Styles */
+body {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #4caf50, #2c6a4f, #81c784);
+  }
+  
+  header {
+    background:  rgba(255, 255, 255, 0.9);
+    color:#4caf50;
+    padding: 1rem;
+  }
+  header h1{
+    font-size: 27px;
+    line-height: 1.5; 
+    display: flex;
+    align-items: center;
+  }
+  header img{
+        height: 3.0em; 
+        width: auto;
+        margin-right: 0.2em;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar nav a {
+    color:#2c6a4f;
+    text-decoration: none;
+    margin-left: 1rem;
+    font-weight: 700;
+    font-size: large;
+  }
+  
+  .navbar nav a:hover {
+    text-decoration: underline;
+  }
+  
+  main {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Ask Section */
+  .ask-section {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #f9f9f9;
+  }
+  
+  .ask-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  
+  .ask-container input {
+    width: 70%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .ask-container button {
+    padding: 0.5rem 1rem;
+    margin-left: 0.5rem;
+    background-color:black;
+    color:#f9f9f9;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .ask-container button:hover {
+    background-color:#4caf50;
+  }
+  
+  /* FAQ Section */
+  .faq-section {
+    margin-top: 2rem;
+    color:#f9f9f9;
+  }
+  
+  .faq-item {
+    margin-bottom: 1rem;
+  }
+  
+  .faq-question {
+    background: #f1f1f1;
+    border: none;
+    width: 100%;
+    text-align: left;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .faq-question:hover {
+    background: #e0e0e0;
+  }
+  
+  .faq-answer {
+    display: none;
+    padding: 0.75rem;
+    background-color: #f9f9f9;
+    border-left: 3px solid #007bff;
+    margin-top: 0.5rem;
+    border-radius: 4px;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #f1f1f1;
+    margin-top: 2rem;
+  }
+  
+  footer a {
+    color:#2c6a4f;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
