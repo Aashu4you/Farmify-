@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FMS Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="loginStyles.css">
+</head>
+<body>
+    <div class="background">
+        <div class="login-card">
+            <h1>Welcome to Farmify</h1>
+            <p>Manage your farm efficiently and effectively.</p>
+            <form action="HomePage.html" method="POST" class="login-form">
+                <div class="form-group">
+                    <input type="text" id="username" name="username" placeholder="Username" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="password" name="password" placeholder="Password" required>
+                </div>
+                <button type="submit" class="btn">Login</button>
+            </form>
+            <div class="extra-links">
+                <a href="/register">Create Account</a> | <a href="/forgot-password">Forgot Password?</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
