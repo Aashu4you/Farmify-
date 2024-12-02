@@ -11,75 +11,103 @@ canvas {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1; /* Ensure it stays behind other content */
+    z-index: 1;
+    /* Ensure it stays behind other content */
 }
 
 header {
-    background-color: #2a6e2c; /* Header background color */
+    background-color: #2a6e2c;
+    /* Header background color */
     padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: background-color 0.3s; /* Smooth transition for hover effect */
-    z-index: 1; /* Ensure the header stays above the canvas */
-    position: relative; /* Ensure header is positioned relative for z-index to take effect */
+    transition: background-color 0.3s;
+    /* Smooth transition for hover effect */
+    z-index: 1;
+    /* Ensure the header stays above the canvas */
+    position: relative;
+    /* Ensure header is positioned relative for z-index to take effect */
 }
 
 header:hover {
-    background-color: #45a049; /* Change to a different shade on hover */
+    background-color: #45a049;
+    /* Change to a different shade on hover */
 }
 
 .logo {
     display: flex;
-    align-items: center; /* Align logo and text vertically */
+    align-items: center;
+    /* Align logo and text vertically */
 }
 
 .logo img {
-    height: 50px; /* Adjust height as needed */
-    width: 50px; /* Set width to the same value as height for a perfect circle */
-    border-radius: 50%; /* Make the image circular */
-    margin-right: 10px; /* Space between logo and text */
-    object-fit: cover; /* Ensure the image covers the area without distortion */
-    margin-top: -5px; /* Move the logo slightly upwards */
+    height: 50px;
+    /* Adjust height as needed */
+    width: 50px;
+    /* Set width to the same value as height for a perfect circle */
+    border-radius: 50%;
+    /* Make the image circular */
+    margin-right: 10px;
+    /* Space between logo and text */
+    object-fit: cover;
+    /* Ensure the image covers the area without distortion */
+    margin-top: -5px;
+    /* Move the logo slightly upwards */
 }
 
 .logo-text {
     font-family: 'Poppins', sans-serif;
-    font-size: 24px; /* Adjust font size as needed */
-    color: white; /* Text color */
-    font-weight: bold; /* Make the text bold */
+    font-size: 24px;
+    /* Adjust font size as needed */
+    color: white;
+    /* Text color */
+    font-weight: bold;
+    /* Make the text bold */
 }
 
 .nav-items {
     display: flex;
-    gap: 10px; /* Space between boxes */
+    gap: 10px;
+    /* Space between boxes */
 }
 
 .nav-item {
-    background-color: white; /* Box background color */
-    border: 1px solid #4CAF50; /* Border color */
-    border-radius: 5px; /* Rounded corners */
-    padding: 10px 15px; /* Padding inside the box */
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+    background-color: white;
+    /* Box background color */
+    border: 1px solid #4CAF50;
+    /* Border color */
+    border-radius: 5px;
+    /* Rounded corners */
+    padding: 10px 15px;
+    /* Padding inside the box */
+    transition: background-color 0.3s, color 0.3s;
+    /* Smooth transition for hover effect */
 }
 
 .nav-item a {
-    text-decoration: none; /* Remove underline from links */
-    color: #4CAF50; /* Link color */
+    text-decoration: none;
+    /* Remove underline from links */
+    color: #4CAF50;
+    /* Link color */
     transition: color 0.3s;
 }
 
 .nav-item:hover {
-    background-color: #6ab66c; /* Change background on hover */
-    color: white; /* Change text color on hover */
+    background-color: #6ab66c;
+    /* Change background on hover */
+    color: white;
+    /* Change text color on hover */
 }
 
 .nav-item:hover a {
-    color: white; /* Change link color to white on nav item hover */
+    color: white;
+    /* Change link color to white on nav item hover */
 }
 
 .cta {
-    background-color: #6ab66c; /* Call to action button color */
+    background-color: #6ab66c;
+    /* Call to action button color */
     color: white;
     border: none;
     padding: 10px 20px;
@@ -89,8 +117,10 @@ header:hover {
 }
 
 .cta:hover {
-    background-color: #6ab66c; /* Darker shade on hover */
-    color: white; /* Ensure text color remains white on hover */
+    background-color: #6ab66c;
+    /* Darker shade on hover */
+    color: white;
+    /* Ensure text color remains white on hover */
 }
 
 button.cta {
@@ -105,56 +135,90 @@ button.cta {
 }
 
 .hero {
-    position: relative; /* Position relative for absolute positioning of the image */
-    height: 100vh; /* Full viewport height */
-    display: flex; /* Use flexbox for alignment */
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
-    text-align: center; /* Center text */
-    color: white; /* Default text color */
-    overflow: hidden; /* Hide overflow */
+    position: relative;
+    /* Position relative for absolute positioning of the image */
+    height: 100vh;
+    /* Full viewport height */
+    display: flex;
+    /* Use flexbox for alignment */
+    justify-content: center;
+    /* Center content horizontally */
+    align-items: center;
+    /* Center content vertically */
+    text-align: center;
+    /* Center text */
+    color: white;
+    /* Default text color */
+    overflow: hidden;
+    /* Hide overflow */
 }
 
 .hero-content {
-    max-width: 600px; /* Limit the width of the content */
-    padding: 20px; /* Padding around the content */
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
-    border-radius: 10px; /* Rounded corners */
-    position: relative; /* Position relative for stacking context */
-    z-index: 2; /* Ensure content is above the image */
+    max-width: 600px;
+    /* Limit the width of the content */
+    padding: 20px;
+    /* Padding around the content */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent background for readability */
+    border-radius: 10px;
+    /* Rounded corners */
+    position: relative;
+    /* Position relative for stacking context */
+    z-index: 2;
+    /* Ensure content is above the image */
 }
 
 .learn-more-container {
-    margin-top: 20px; /* Space above the button */
+    margin-top: 20px;
+    /* Space above the button */
 }
 
 .learn-more {
-    background-color: white; /* White background */
-    color: #4CAF50; /* Text color (green) */
-    border: 1px solid #4CAF50; /* Green border */
-    border-radius: 5px; /* Rounded corners */
-    padding: 10px 20px; /* Padding inside the button */
-    text-decoration: none; /* Remove underline */
-    font-weight: bold; /* Make text bold */
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+    background-color: white;
+    /* White background */
+    color: #4CAF50;
+    /* Text color (green) */
+    border: 1px solid #4CAF50;
+    /* Green border */
+    border-radius: 5px;
+    /* Rounded corners */
+    padding: 10px 20px;
+    /* Padding inside the button */
+    text-decoration: none;
+    /* Remove underline */
+    font-weight: bold;
+    /* Make text bold */
+    transition: background-color 0.3s, color 0.3s;
+    /* Smooth transition */
 }
 
 .learn-more:hover {
-    background-color: #4CAF50; /* Change background on hover */
-    color: white; /* Change text color on hover */
+    background-color: #4CAF50;
+    /* Change background on hover */
+    color: white;
+    /* Change text color on hover */
 }
 
 .hero-image {
-    position: absolute; /* Position the image absolutely */
-    top: 0; /* Align to the top */
-    left: 0; /* Align to the left */
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    object-fit: cover; /* Cover the entire section */
-    z-index: 0; /* Ensure the image is behind the content */
+    position: absolute;
+    /* Position the image absolutely */
+    top: 0;
+    /* Align to the top */
+    left: 0;
+    /* Align to the left */
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    object-fit: cover;
+    /* Cover the entire section */
+    z-index: 0;
+    /* Ensure the image is behind the content */
 }
 
-.feature-cards, .pricing-cards, .dashboard-overview {
+.feature-cards,
+.pricing-cards,
+.dashboard-overview {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -163,62 +227,82 @@ button.cta {
 }
 
 .card {
-    background-color: #ffffff; /* Card background color */
-    border: 1px solid #d1d1d1; /* Border color */
+    background-color: #ffffff;
+    /* Card background color */
+    border: 1px solid #d1d1d1;
+    /* Border color */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    border-radius: 10px; /* Rounded corners */
+    border-radius: 10px;
+    /* Rounded corners */
     padding: 20px;
-    width: 250px; /* Set a fixed width */
+    width: 250px;
+    /* Set a fixed width */
     text-align: center;
-    text-decoration: none; /* Remove underline from links */
-    color: #2a6e2c; /* Default text color */
-    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+    text-decoration: none;
+    /* Remove underline from links */
+    color: #2a6e2c;
+    /* Default text color */
+    transition: transform 0.3s, box-shadow 0.3s;
+    /* Smooth transition for hover effect */
 }
 
 .card:hover {
-    transform: translateY(-5px); /* Lift effect on hover */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+    transform: translateY(-5px);
+    /* Lift effect on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    /* Add shadow on hover */
 }
 
 .card.featured {
-    border: none; /* Remove border for the Pro card */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Optional: Add shadow to make it stand out */
+    border: none;
+    /* Remove border for the Pro card */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    /* Optional: Add shadow to make it stand out */
 }
 
-/*.featured {
-    border: 2px solid #2a6e2c;
-    box-shadow: 0 0 10px rgba(0, 128, 0, 0.2);
-}*/
-
+/*.featured { border: 2px solid #2a6e2c; box-shadow: 0 0 10px rgba(0, 128, 0, 0.2); }*/
 .card h3 {
     margin: 10px 0;
 }
 
 .card p {
-    margin: 0; /* Remove default margin */
+    margin: 0;
+    /* Remove default margin */
 }
 
 .button {
-    display: inline-block; /* Make it behave like a block element */
-    background-color: #2a6e2c; /* Button background color */
-    color: white; /* Button text color */
-    padding: 10px 20px; /* Padding inside the button */
-    border-radius: 5px; /* Rounded corners */
-    text-decoration: none; /* Remove underline from links */
-    font-weight: bold; /* Make text bold */
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+    display: inline-block;
+    /* Make it behave like a block element */
+    background-color: #2a6e2c;
+    /* Button background color */
+    color: white;
+    /* Button text color */
+    padding: 10px 20px;
+    /* Padding inside the button */
+    border-radius: 5px;
+    /* Rounded corners */
+    text-decoration: none;
+    /* Remove underline from links */
+    font-weight: bold;
+    /* Make text bold */
+    transition: background-color 0.3s, color 0.3s;
+    /* Smooth transition for hover effect */
 }
 
 .button:hover {
-    background-color: #6ab66c; /* Change background on hover */
-    color: white; /* Ensure text color remains white on hover */
+    background-color: #6ab66c;
+    /* Change background on hover */
+    color: white;
+    /* Ensure text color remains white on hover */
 }
 
 .card:nth-child(1) .button {
-    margin-top: 20px; /* Adjust this value to move the button lower */
+    margin-top: 20px;
+    /* Adjust this value to move the button lower */
 }
 
-input, textarea {
+input,
+textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
@@ -250,127 +334,187 @@ footer {
 
 .section-container {
     display: flex;
-    flex-direction: column; /* Stack sections vertically */
-    gap: 40px; /* Equal spacing between sections */
-    padding: 20px; /* Optional padding around the container */
+    flex-direction: column;
+    /* Stack sections vertically */
+    gap: 40px;
+    /* Equal spacing between sections */
+    padding: 20px;
+    /* Optional padding around the container */
 }
 
 /* Common styles for Features and Pricing sections */
 section {
-    position: relative; /* Position relative for stacking context */
-    padding: 40px; /* Add padding for spacing */
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
-    overflow: hidden; /* Prevent overflow */
+    position: relative;
+    /* Position relative for stacking context */
+    padding: 40px;
+    /* Add padding for spacing */
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Semi-transparent background */
+    border-radius: 10px;
+    /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    /* Light shadow for depth */
+    overflow: hidden;
+    /* Prevent overflow */
 }
 
 /* Specific styles for Features section */
 #features {
-    margin-top: 0; /* Remove top margin */
+    margin-top: 0;
+    /* Remove top margin */
 }
 
 /* Specific styles for Pricing section */
 #pricing {
-    margin-top: 0; /* Remove top margin */
+    margin-top: 0;
+    /* Remove top margin */
 }
 
 /* Specific styles for Dashboard section */
 #dashboard {
-    margin-top: 0; /* Remove top margin */
+    margin-top: 0;
+    /* Remove top margin */
 }
 
 /* Specific styles for Contact section */
 #contact {
-    margin-top: 0; /* Remove top margin */
+    margin-top: 0;
+    /* Remove top margin */
 }
 
 /* Glowing box for section titles */
 .title-box {
-    width: calc(100% - 40px); /* Full width minus section padding */
-    background-color: rgba(42, 110, 44, 0.8); /* Background color for the title box */
-    padding: 20px; /* Padding around the title */
-    border-radius: 10px; /* Rounded corners */
-    text-align: center; /* Center the title text */
-    margin: 0 auto 20px auto; /* Center the box and add space below */
-    box-shadow: 0 0 10px rgba(106, 182, 108, 0.8), 0 0 20px rgba(106, 182, 108, 0.5); /* Glowing effect */
+    width: calc(100% - 40px);
+    /* Full width minus section padding */
+    background-color: rgba(42, 110, 44, 0.8);
+    /* Background color for the title box */
+    padding: 20px;
+    /* Padding around the title */
+    border-radius: 10px;
+    /* Rounded corners */
+    text-align: center;
+    /* Center the title text */
+    margin: 0 auto 20px auto;
+    /* Center the box and add space below */
+    box-shadow: 0 0 10px rgba(106, 182, 108, 0.8), 0 0 20px rgba(106, 182, 108, 0.5);
+    /* Glowing effect */
 }
 
 /* Glowing effect for section titles */
 h2 {
-    color: #ffffff; /* Title color */
-    margin: 0; /* Remove default margin */
-    text-shadow: 0 0 5px #6ab66c, 0 0 10px #6ab66c, 0 0 15px #6ab66c; /* Glowing effect */
-    transition: text-shadow 0.3s ease-in-out; /* Smooth transition for hover effect */
+    color: #ffffff;
+    /* Title color */
+    margin: 0;
+    /* Remove default margin */
+    text-shadow: 0 0 5px #6ab66c, 0 0 10px #6ab66c, 0 0 15px #6ab66c;
+    /* Glowing effect */
+    transition: text-shadow 0.3s ease-in-out;
+    /* Smooth transition for hover effect */
 }
 
 /* Optional: Add a hover effect to intensify the glow */
 h2:hover {
-    text-shadow: 0 0 10px #6ab66c, 0 0 20px #6ab66c, 0 0 30px #6ab66c; /* Intensified glow on hover */
+    text-shadow: 0 0 10px #6ab66c, 0 0 20px #6ab66c, 0 0 30px #6ab66c;
+    /* Intensified glow on hover */
 }
 
 .dashboard-overview {
     display: flex;
-    justify-content: center; /* Center the widgets */
-    gap: 20px; /* Space between widgets */
-    padding: 20px 0; /* Padding above and below */
+    justify-content: center;
+    /* Center the widgets */
+    gap: 20px;
+    /* Space between widgets */
+    padding: 20px 0;
+    /* Padding above and below */
 }
 
 .widget {
-    background-color: #ffffff; /* Widget background color */
-    border: 1px solid #d1d1d1; /* Border color */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Shadow for depth */
-    border-radius: 10px; /* Rounded corners */
-    padding: 20px; /* Padding inside the widget */
-    text-align: center; /* Center text */
-    color: #2a6e2c; /* Default text color */
-    text-decoration: none; /* Remove underline from links */
-    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+    background-color: #ffffff;
+    /* Widget background color */
+    border: 1px solid #d1d1d1;
+    /* Border color */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    /* Shadow for depth */
+    border-radius: 10px;
+    /* Rounded corners */
+    padding: 20px;
+    /* Padding inside the widget */
+    text-align: center;
+    /* Center text */
+    color: #2a6e2c;
+    /* Default text color */
+    text-decoration: none;
+    /* Remove underline from links */
+    transition: transform 0.3s, box-shadow 0.3s;
+    /* Smooth transition for hover effect */
 }
 
 .widget:hover {
-    transform: translateY(-5px); /* Lift effect on hover */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+    transform: translateY(-5px);
+    /* Lift effect on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    /* Add shadow on hover */
 }
 
 /* Center the submit button */
 .submit-container {
-    display: flex; /* Use flexbox for centering */
-    justify-content: center; /* Center horizontally */
-    margin-top: 20px; /* Space above the button */
+    display: flex;
+    /* Use flexbox for centering */
+    justify-content: center;
+    /* Center horizontally */
+    margin-top: 20px;
+    /* Space above the button */
 }
 
 /* Submit button styles */
 .submit-button {
-    background-color: #2a6e2c; /* Initial background color */
-    color: white; /* Initial text color */
-    border: none; /* No border */
-    padding: 10px 20px; /* Padding inside the button */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor on hover */
-    font-weight: bold; /* Bold text */
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+    background-color: #2a6e2c;
+    /* Initial background color */
+    color: white;
+    /* Initial text color */
+    border: none;
+    /* No border */
+    padding: 10px 20px;
+    /* Padding inside the button */
+    border-radius: 5px;
+    /* Rounded corners */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    font-weight: bold;
+    /* Bold text */
+    transition: background-color 0.3s, color 0.3s;
+    /* Smooth transition for hover effect */
 }
 
 /* Hover effect for the submit button */
 .submit-button:hover {
-    background-color: #45a049; /* Change background color on hover */
-    color: white; /* Ensure text color remains white on hover */
+    background-color: #45a049;
+    /* Change background color on hover */
+    color: white;
+    /* Ensure text color remains white on hover */
 }
 
 .social-icons {
-    display: flex; /* Use flexbox for alignment */
-    justify-content: center; /* Center the icons */
-    margin-top: 10px; /* Space above the icons */
+    display: flex;
+    /* Use flexbox for alignment */
+    justify-content: center;
+    /* Center the icons */
+    margin-top: 10px;
+    /* Space above the icons */
 }
 
 .social-icon {
-    width: 30px; /* Set the width of the icons */
-    height: auto; /* Maintain aspect ratio */
-    margin: 0 10px; /* Space between icons */
-    transition: transform 0.3s; /* Smooth transition for hover effect */
+    width: 30px;
+    /* Set the width of the icons */
+    height: auto;
+    /* Maintain aspect ratio */
+    margin: 0 10px;
+    /* Space between icons */
+    transition: transform 0.3s;
+    /* Smooth transition for hover effect */
 }
 
 .social-icon:hover {
-    transform: scale(1.1); /* Slightly enlarge the icon on hover */
+    transform: scale(1.1);
+    /* Slightly enlarge the icon on hover */
 }
