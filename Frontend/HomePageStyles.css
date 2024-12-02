@@ -1,0 +1,228 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+.logo {
+    display: flex; /* Use flexbox to align items */
+    align-items: center; /* Center items vertically */
+}
+
+.logo img {
+    height: 50px; /* Adjust height as needed */
+    width: 50px; /* Set width to the same value as height for a perfect circle */
+    border-radius: 50%; /* Make the image circular */
+    margin-right: 10px; /* Space between logo and text */
+}
+
+.logo-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px; /* Adjust font size as needed */
+    color: white; /* Text color */
+    font-weight: bold; /* Make the text bold */
+}
+
+.nav-items {
+    display: flex; /* Align nav items in a row */
+    gap: 50px; /* Space between boxes */
+}
+
+.nav-item {
+    background-color: white; /* Box background color */
+    border: 1px solid #4CAF50; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 15px; /* Padding inside the box */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+.nav-item a {
+    text-decoration: none; /* Remove underline from links */
+    color: black; /* Link color */
+    transition: color 0.3s; /* Smooth transition for link color */
+}
+
+.nav-item:hover {
+    background-color: #6ab66c; /* Change background on hover */
+    box-shadow: 0 0 15px rgba(106, 182, 108, 0.8); /* Glowing effect on hover */
+}
+
+.nav-item:hover a {
+    color: white; /* Change link color to white on hover */
+}
+
+.banner {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.banner img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.banner h1 {
+    position: absolute;
+    top: 45%; /* Adjust this value as needed */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+}
+
+.banner p {
+    position: absolute;
+    top: 50%; /* Adjust this value as needed */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 20px; /* Add margin to create space below the h1 */
+}
+
+.container {
+    padding: 20px 40px;
+}
+
+.welcome {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.welcome-box {
+    position: absolute; /* Position it relative to the banner */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center the box */
+    background-color: rgba(94, 93, 93, 0.8); /* White background with transparency */
+    padding: 100px 600px; /* Increased padding for more space */
+    border-radius: 15px; /* Rounded corners */
+    text-align: center; /* Center text */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Optional shadow for depth */
+    max-width: 90%; /* Limit the width to make it responsive */
+    box-sizing: border-box; /* Include padding in the total width/height */
+}
+
+
+.banner {
+    position: relative; /* This is important for the child element (.welcome-box) to be positioned relatively */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Initial shadow */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+    background-color: #f0f8f1;
+}
+
+.card img {
+    width: 100%; /* Make the image responsive to the card width */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 200px; /* Set a maximum height for the image */
+    object-fit: cover; /* Ensure the image covers the area */
+    border-radius: 10px;
+}
+
+#government-schemes-section img {
+    width: 100%; /* Make the image responsive to the card width */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 200px; /* Set a maximum height for the image */
+    object-fit: cover; /* Ensure the image covers the area */
+    border-radius: 10px; /* Optional: Add rounded corners */
+}
+
+#crop-section img {
+    width: 100%; /* Make the image responsive to the card width */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 350px; /* Set the maximum height for the image */
+    object-fit: cover; /* Ensure the image covers the area */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    margin-top: 10px; /* Add margin to push the image down */
+    padding-bottom: 15%;
+}
+
+.card h3 {
+    margin: 15px 0;
+    color: #333;
+}
+
+.card p {
+    color: #666;
+}
+
+.text-box {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    border: 2px solid #4CAF50; /* Border color */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px; /* Padding inside the box */
+    text-align: center; /* Center text */
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+    margin-top: 10px; /* Space between image and text box */
+}
+
+.text-box a {
+    text-decoration: none; /* Remove underline from links */
+    color: #4CAF50; /* Initial text color */
+    transition: color 0.3s; /* Smooth transition for text color */
+}
+
+.text-box:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+    background-color: #4CAF50; /* Change background color on hover */
+    color: white; /* Change font color to white on hover */
+}
+
+.text-box:hover a {
+    color: white; /* Change link color to white on hover */
+}
+
+.text-box:hover h3 {
+    color: white; /* Change h3 and p text color to white on hover */
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
