@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crops Timeline</title>
+  <link rel="stylesheet" href="cropscheduling.css">
+</head>
+<body>
+
+  <header>
+    <div class="navbar">
+      <h1><img src="farmify.png" alt="logo" class="logo">FARMIFY Grow Calender</h1>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="table-section">
+      <h2>Crop Information</h2>
+      <table class="crop-table">
+        <thead>
+          <tr>
+            <th>Crop</th>
+            <th>Soil Type</th>
+            <th>Time to Harvest</th>
+            <th>Best Season to Harvest</th>
+            <th>Tools</th>
+            <th>Fertilizers</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="corn">
+            <td>Corn</td>
+            <td>Well drained sandy loam</td>
+            <td>3-4 months</td>
+            <td>Kharif</td>
+            <td>Planter, Combine harvester</td>
+            <td>Nitrogen-rich fertilizers, Phosphate</td>
+            <td>Corn is used as food, animal feed, and for industrial products</td>
+          </tr>
+          <tr class="wheat">
+            <td>Wheat</td>
+            <td>Loamy soil</td>
+            <td>4 months</td>
+            <td>Rabi</td>
+            <td>Plough, Seed drill</td>
+            <td>Urea, DAP</td>
+            <td>Wheat is a staple crop used for producing flour and bread</td>
+          </tr>
+          <tr class="cotton">
+            <td>Cotton</td>
+            <td>Well drained black soil</td>
+            <td>6-8 months</td>
+            <td>Kharif</td>
+            <td>Plough, Cotton picker</td>
+            <td>NPK fertilizers</td>
+            <td>Cotton is a fibre crop used in fibre industries</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section class="table-section">
+      <h2>Crop Timeline Table</h2>
+      <table class="crop-table">
+        <thead>
+          <tr>
+            <th>Crop</th>
+            <th>Planting Start Date</th>
+            <th>Harvest Start Date</th>
+            <th>Timeline</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="corn">
+            <td>Corn</td>
+            <td>2024-04-01</td>
+            <td>2024-08-01</td>
+            <td><div class="timeline corn"></div></td>
+          </tr>
+          <tr class="wheat">
+            <td>Wheat</td>
+            <td>2024-05-15</td>
+            <td>2024-09-01</td>
+            <td><div class="timeline wheat"></div></td>
+          </tr>
+          <tr class="soy">
+            <td>Soy</td>
+            <td>2024-06-01</td>
+            <td>2024-10-01</td>
+            <td><div class="timeline soy"></div></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 FARMIFY. All rights reserved. <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+  </footer>
+
+  <script src="crop-table-timeline.js"></script>
+</body>
+</html>
