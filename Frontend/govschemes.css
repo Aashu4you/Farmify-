@@ -1,0 +1,98 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(135deg, #4caf50, #2c6a4f, #81c784);
+}
+
+header {
+    background:rgba(255, 255, 255, 0.9);
+    color:#4caf50;
+    padding: 1rem;
+  }
+  header h1{
+    font-size: 27px;
+    line-height: 1.5; 
+    display: flex;
+    align-items: center;
+  }
+  header img{
+        height: 3.0em; 
+        width: auto;
+        margin-right: 0.2em;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar nav a {
+    color:#2c6a4f;
+    text-decoration: none;
+    margin-left: 1rem;
+    font-weight: 700;
+    font-size: large;
+  }
+  
+  .navbar nav a:hover {
+    text-decoration: underline;
+  }
+
+.banner {
+    background: url('farm-banner.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    font-size: larger;
+}
+
+.schemes {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background: linear-gradient(135deg, #4caf50, #2c6a4f, #81c784);
+}
+
+.scheme-card {
+    background-color: white;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 30%;
+    text-align: center;
+}
+
+.scheme-card img {
+    width: 80px;
+    height: 80px;
+}
+
+.scheme-card h2 {
+    font-size: 1.5em;
+    color: #2d572c;
+}
+
+.scheme-card button {
+    background-color: #2d572c;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.scheme-card button:hover {
+    background-color: #1b3d1c;
+}
+
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color:rgba(255, 255, 255, 0.9);
+    color:#2d572c;
+}
