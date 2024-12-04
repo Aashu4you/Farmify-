@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Crop Selection</title>
+    <link rel="stylesheet" href="cropchoose.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Crop Selection Form</h1>
+        <form id="cropForm">
+            <label for="cropType">Select Crop Type:</label>
+            <select id="cropType" name="cropType" required>
+                <option value="" disabled selected>Select a crop</option>
+                <option value="Wheat">Wheat</option>
+                <option value="Rice">Rice</option>
+                <option value="Corn">Corn</option>
+                <option value="Sugarcane">Sugarcane</option>
+                <option value="Potato">Potato</option>
+                <option value="Onion">Onion</option>
+                <option value="Cucumber">Cucumber</option>
+                <option value="Grapes">Grapes</option>
+                <option value="Cotton">Cotton</option>
+                <option value="Mustard">Mustard</option>
+                <option value="Sunflower">Sunflower</option>
+                <option value="Jasmine">Jasmine</option>
+            </select>
+
+            <label for="sowDate">Date of Sowing:</label>
+            <input type="date" id="sowDate" name="sowDate" required>
+
+            <label for="fertilizer">Fertilizer Used:</label>
+            <input type="text" id="fertilizer" name="fertilizer" required placeholder="e.g., Urea, NPK">
+
+            <label for="pesticide">Pesticide Used:</label>
+            <input type="text" id="pesticide" name="pesticide" placeholder="e.g., Roundup">
+
+            <label for="notes">Additional Notes:</label>
+            <textarea id="notes" name="notes" rows="4" cols="50" placeholder="Any additional information..."></textarea>
+
+            <button type="submit">Submit</button>
+
+            <div class="previous-crops">
+                <h3>View Previous Crop Schedules</h3>
+                <a href="cropscheduling.html" class="view-crops-button">View Previous Crops</a>
+            </div>
+        </form>
+        <div id="result" class="result"></div>
+    </div>
+
+    <script src="cropchoose.js"></script>
+</body>
+</html>
