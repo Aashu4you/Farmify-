@@ -21,3 +21,12 @@ function updateStrengthBar(strength) {
   strengthBar.style.setProperty('--strength-color', strengthColors[strength]);
   strengthBar.style.width = `${(strength / 4) * 100}%`;
 }
+
+document.getElementById('create-account-form').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent the default form submission
+
+  // Perform any validations or operations here
+
+  // Redirect to the desired page
+  window.location.href = 'login.html'; // Change to the desired page
+});
