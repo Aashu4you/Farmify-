@@ -1,6 +1,7 @@
 const passwordInput = document.getElementById('password');
 const strengthBar = document.getElementById('password-strength');
 
+// Password strength calculation and update
 passwordInput.addEventListener('input', () => {
   const password = passwordInput.value;
   const strength = calculateStrength(password);
@@ -22,11 +23,36 @@ function updateStrengthBar(strength) {
   strengthBar.style.width = `${(strength / 4) * 100}%`;
 }
 
-document.getElementById('create-account-form').addEventListener('submit', function(event) {
+// Form submission handling
+document.getElementById('create-account-form').addEventListener('submit', async function(event) {
   event.preventDefault(); // Prevent the default form submission
 
-  // Perform any validations or operations here
+  // Gather form data
+  const formData = new FormData(this);
+  const formObject = {};
+  formData.forEach((value, key) => {
+    formObject[key] = value;
+  });
 
-  // Redirect to the desired page
-  window.location.href = 'login.html'; // Change to the desired page
+  // Send POST request to the server
+  try {
+    const response = await fetch('/create-account', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formObject),
+    });
+
+    if (response.ok) {
+      alert('Account created successfully! Redirecting to login page...');
+      window.location.href = 'login.html'; // Redirect to login page
+    } else {
+      const errorText = await response.text();
+      alert(`Error: ${errorText}`);
+    }
+  } catch (error) {
+    console.error('Error:', error);
+    alert('An error occurred. Please try again.');
+  }
 });
