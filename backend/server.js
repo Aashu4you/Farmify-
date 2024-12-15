@@ -3,11 +3,7 @@ import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import bcrypt from 'bcrypt';
 import path from 'path';
-import { fileURLToPath } from 'url'; // Import this to get the __dirname equivalent
-
-// Get __dirname equivalent in ES modules
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+import { fileURLToPath } from 'url';
 
 // Initialize the Express app
 const app = express();
@@ -16,15 +12,24 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// Serve static files from the 'Frontend' directory
-app.use(express.static(path.join(__dirname, '..', 'Frontend')));
+// Get __dirname equivalent in ES modules
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// MongoDB URI directly in the script (Replace with your MongoDB URI)
+const mongoURI = 'mongodb+srv://Aashu0:Aashu%2A123@farmify.uklsy.mongodb.net/?retryWrites=true&w=majority&appName=Farmify';
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/Database', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose
+    .connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => console.log("Connected to Database"))
+    .catch((err) => {
+        console.error("Error connecting to the database:", err.message);
+    });
+
 const db = mongoose.connection;
 
 db.on('error', () => console.log("Error in connecting to Database"));
-db.once('open', () => console.log("Connected to Database"));
 
 // Define the User model
 const User = mongoose.model('User', new mongoose.Schema({
@@ -52,16 +57,13 @@ app.post("/create-account", async (req, res) => {
     }
 
     try {
-        // Check if phone number already exists
         const existingUser = await User.findOne({ phoneNumber });
         if (existingUser) {
             return res.status(400).send("This phone number is already registered.");
         }
 
-        // Hash the password
         const hashedPassword = await bcrypt.hash(password, 10);
 
-        // Create a new user object
         const newUser = new User({
             name,
             phoneNumber,
@@ -70,7 +72,6 @@ app.post("/create-account", async (req, res) => {
             password: hashedPassword,
         });
 
-        // Save user in the database
         await newUser.save();
         return res.status(200).send("Account created successfully");
     } catch (error) {
@@ -84,23 +85,19 @@ app.post("/login", async (req, res) => {
     const { phoneNumber, password } = req.body;
 
     try {
-        // Find user by phone number
         const user = await User.findOne({ phoneNumber });
 
         if (!user) {
             return res.status(400).json({ success: false, message: "User not found" });
         }
 
-        // Compare the entered password with the stored hashed password
         const isMatch = await bcrypt.compare(password, user.password);
 
         if (!isMatch) {
             return res.status(400).json({ success: false, message: "Incorrect password" });
         }
 
-        // If authentication is successful
         return res.status(200).json({ success: true, message: "Login successful" });
-
     } catch (error) {
         console.error(error);
         res.status(500).json({ success: false, message: "Internal server error" });
@@ -135,11 +132,9 @@ app.put("/update-account/:phoneNumber", async (req, res) => {
         }
 
         if (password) {
-            // Hash the new password if provided
             user.password = await bcrypt.hash(password, 10);
         }
 
-        // Update other fields
         user.name = name || user.name;
         user.age = age || user.age;
         user.location = location || user.location;
@@ -173,6 +168,9 @@ app.get("/", (req, res) => {
     });
     res.sendFile(path.join(__dirname, '..', 'Frontend', 'index.html'));
 });
+
+// Serve static files (CSS, JS, images, etc.)
+app.use(express.static(path.join(__dirname, '..', 'Frontend')));
 
 // Start the server
 app.listen(3000, () => {
