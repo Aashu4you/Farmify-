@@ -20,7 +20,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, '..', 'Frontend')));
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/Database');
+mongoose.connect('mongodb://localhost:27017/Database', { useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose.connection;
 
 db.on('error', () => console.log("Error in connecting to Database"));
@@ -33,6 +33,13 @@ const User = mongoose.model('User', new mongoose.Schema({
     age: Number,
     location: String,
     password: String,
+}));
+
+// Define the Contact model
+const Contact = mongoose.model('Contact', new mongoose.Schema({
+    name: String,
+    email: String,
+    message: String,
 }));
 
 // POST route to handle account creation
@@ -55,19 +62,16 @@ app.post("/create-account", async (req, res) => {
         const hashedPassword = await bcrypt.hash(password, 10);
 
         // Create a new user object
-        const data = {
-            name: name,
-            phoneNumber: phoneNumber,
-            age: age,
-            location: location,
+        const newUser = new User({
+            name,
+            phoneNumber,
+            age,
+            location,
             password: hashedPassword,
-        };
+        });
 
-        // Insert into the database
-        const newUser = new User(data);
+        // Save user in the database
         await newUser.save();
-
-        console.log("Account created successfully");
         return res.status(200).send("Account created successfully");
     } catch (error) {
         console.error(error);
@@ -81,7 +85,7 @@ app.post("/login", async (req, res) => {
 
     try {
         // Find user by phone number
-        const user = await db.collection('users').findOne({ phoneNumber });
+        const user = await User.findOne({ phoneNumber });
 
         if (!user) {
             return res.status(400).json({ success: false, message: "User not found" });
@@ -103,14 +107,74 @@ app.post("/login", async (req, res) => {
     }
 });
 
+// GET route to fetch user details
+app.get("/account-details/:phoneNumber", async (req, res) => {
+    const { phoneNumber } = req.params;
+
+    try {
+        const user = await User.findOne({ phoneNumber });
+        if (!user) {
+            return res.status(404).send("User not found");
+        }
+        res.status(200).json(user);
+    } catch (error) {
+        console.error(error);
+        res.status(500).send("Internal server error");
+    }
+});
+
+// PUT route to update user details
+app.put("/update-account/:phoneNumber", async (req, res) => {
+    const { phoneNumber } = req.params;
+    const { name, age, location, password } = req.body;
+
+    try {
+        const user = await User.findOne({ phoneNumber });
+        if (!user) {
+            return res.status(404).send("User not found");
+        }
+
+        if (password) {
+            // Hash the new password if provided
+            user.password = await bcrypt.hash(password, 10);
+        }
+
+        // Update other fields
+        user.name = name || user.name;
+        user.age = age || user.age;
+        user.location = location || user.location;
+
+        await user.save();
+        res.status(200).send("Account updated successfully");
+    } catch (error) {
+        console.error(error);
+        res.status(500).send("Internal server error");
+    }
+});
+
+// POST route to handle contact form submissions
+app.post("/contact", async (req, res) => {
+    const { name, email, message } = req.body;
+
+    try {
+        const newContact = new Contact({ name, email, message });
+        await newContact.save();
+        res.status(200).send("Message received successfully");
+    } catch (error) {
+        console.error(error);
+        res.status(500).send("Internal server error");
+    }
+});
+
 // Serve the homepage or other static routes
 app.get("/", (req, res) => {
     res.set({
         "Allow-access-Allow-Origin": '*'
     });
+    res.sendFile(path.join(__dirname, '..', 'Frontend', 'index.html'));
 });
 
 // Start the server
 app.listen(3000, () => {
-    console.log("Your website is hosted at http://localhost:3000/index.html");
+    console.log("Your website is hosted at http://localhost:3000");
 });
