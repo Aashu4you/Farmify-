@@ -16,6 +16,12 @@
         <span>📍 Location: <span id="location-name">Fetching...</span></span>
         <span style="display: block;">🕒 Date: <span id="current-date">Loading...</span></span>
       </div>
+      <div class="search-container">
+        <form id="city-form">
+          <input type="text" id="city-input" placeholder="Enter city name..." required>
+          <button type="submit">Search</button>
+        </form>
+      </div>
     </div>
   </header>
 
@@ -75,37 +81,5 @@
       <p>Powered by OpenWeatherMap</p>
     </div>
   </footer>
-
-  <script>
-    // Rainfall Chart
-    const ctx1 = document.getElementById('rainfallChart').getContext('2d');
-    new Chart(ctx1, {
-      type: 'line',
-      data: {
-        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-        datasets: [{
-          label: 'Rainfall (mm)',
-          data: [30, 50, 40, 60, 80, 120, 150, 180, 100, 60, 40, 30],
-          borderColor: '#4caf50',
-          fill: false
-        }]
-      }
-    });
-
-    // Temperature Chart
-    const ctx2 = document.getElementById('temperatureChart').getContext('2d');
-    new Chart(ctx2, {
-      type: 'line',
-      data: {
-        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-        datasets: [{
-          label: 'Temperature (°C)',
-          data: [18, 20, 25, 30, 35, 40, 38, 36, 32, 28, 24, 20],
-          borderColor: '#ff5722',
-          fill: false
-        }]
-      }
-    });
-  </script>
 </body>
 </html>

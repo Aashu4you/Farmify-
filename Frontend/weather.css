@@ -9,7 +9,7 @@ body {
 
 /* Header */
 header {
-  background-color: #065a1e;
+  background-color: #0ec6de;
   color: #fff;
   padding: 20px;
   text-align: center;
@@ -144,4 +144,28 @@ footer {
   position: sticky;
   bottom: 0;
   width: 100%;
+}
+.search-container {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+#city-input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
 }
