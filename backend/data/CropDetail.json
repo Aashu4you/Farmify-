@@ -1,0 +1,110 @@
+[
+  {
+    "crop": "Wheat",
+    "soil": "Loamy soil",
+    "timeToHarvest": "4 months",
+    "bestSeason": "Rabi",
+    "tools": ["Plough", "Seed drill"],
+    "fertilizers": ["Urea", "DAP"],
+    "description": "Wheat is a staple crop used for producing flour and bread."
+  },
+  {
+    "crop": "Rice",
+    "soil": "Clayey soil with good water retention",
+    "timeToHarvest": "4-5 months",
+    "bestSeason": "Kharif",
+    "tools": ["Transplanter", "Harvesting sickle"],
+    "fertilizers": ["Ammonium sulfate", "Potassium chloride"],
+    "description": "Rice is the most widely consumed staple food, grown in waterlogged fields."
+  },
+  {
+    "crop": "Corn",
+    "soil": "Well-drained sandy loam",
+    "timeToHarvest": "3-4 months",
+    "bestSeason": "Kharif",
+    "tools": ["Planter", "Combine harvester"],
+    "fertilizers": ["Nitrogen-rich fertilizers", "Phosphate"],
+    "description": "Corn is used as food, animal feed, and for industrial products."
+  },
+  {
+    "crop": "Sugarcane",
+    "soil": "Well-drained loamy soil",
+    "timeToHarvest": "10-18 months",
+    "bestSeason": "Annual crop",
+    "tools": ["Cane cutter", "Harvester"],
+    "fertilizers": ["Nitrogen, Phosphorus, Potassium (NPK)"],
+    "description": "Sugarcane is a cash crop primarily used for sugar production."
+  },
+  {
+    "crop": "Potato",
+    "soil": "Well-drained sandy loam",
+    "timeToHarvest": "3-4 months",
+    "bestSeason": "Rabi",
+    "tools": ["Hoe", "Harvester"],
+    "fertilizers": ["Potash", "Phosphorus"],
+    "description": "Potatoes are a tuber crop widely used in food products."
+  },
+  {
+    "crop": "Onion",
+    "soil": "Well-drained sandy loam",
+    "timeToHarvest": "3-4 months",
+    "bestSeason": "Rabi/Kharif",
+    "tools": ["Seed drill", "Hoe"],
+    "fertilizers": ["Phosphorus, Potash"],
+    "description": "Onions are used in culinary dishes and are grown worldwide."
+  },
+  {
+    "crop": "Cucumber",
+    "soil": "Loamy soil rich in organic matter",
+    "timeToHarvest": "2-3 months",
+    "bestSeason": "Zaid",
+    "tools": ["Seed planter", "Hoe"],
+    "fertilizers": ["Compost, Nitrogen"],
+    "description": "Cucumber is a quick-growing vegetable used in salads and pickles."
+  },
+  {
+    "crop": "Grapes",
+    "soil": "Deep, well-drained clay loam",
+    "timeToHarvest": "6-8 months",
+    "bestSeason": "Annual crop",
+    "tools": ["Pruners", "Harvesting knife"],
+    "fertilizers": ["Phosphorus, Potassium"],
+    "description": "Grapes are grown for fresh consumption, juice, and wine production."
+  },
+  {
+    "crop": "Cotton",
+    "soil": "Well-drained black soil",
+    "timeToHarvest": "6-8 months",
+    "bestSeason": "Kharif",
+    "tools": ["Plough", "Cotton picker"],
+    "fertilizers": ["NPK fertilizers"],
+    "description": "Cotton is a fiber crop used in textile industries."
+  },
+  {
+    "crop": "Mustard",
+    "soil": "Fertile alluvial soil",
+    "timeToHarvest": "3-4 months",
+    "bestSeason": "Rabi",
+    "tools": ["Seed drill", "Harvesting sickle"],
+    "fertilizers": ["Nitrogen, Phosphorus"],
+    "description": "Mustard is an oilseed crop used for oil production and condiments."
+  },
+  {
+    "crop": "Sunflower",
+    "soil": "Well-drained sandy loam",
+    "timeToHarvest": "3-4 months",
+    "bestSeason": "Kharif",
+    "tools": ["Seed drill", "Combine harvester"],
+    "fertilizers": ["NPK fertilizers"],
+    "description": "Sunflowers are grown for oil production and as ornamental plants."
+  },
+  {
+    "crop": "Jasmine",
+    "soil": "Well-drained sandy loam",
+    "timeToHarvest": "6-8 months",
+    "bestSeason": "Annual crop",
+    "tools": ["Pruning shears", "Spade"],
+    "fertilizers": ["Organic compost"],
+    "description": "Jasmine is grown for its fragrant flowers used in perfumes and decorations."
+  }
+]
