@@ -176,3 +176,17 @@ app.use(express.static(path.join(__dirname, '..', 'Frontend')));
 app.listen(3000, () => {
     console.log("Your website is hosted at http://localhost:3000");
 });
+
+
+// Define the port number
+const PORT = 9090;
+
+// Create a simple route for testing
+app.get('/api', (req, res) => {
+    res.send('Backend is running!');
+});
+
+// Start listening on the specified port
+app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
+});
