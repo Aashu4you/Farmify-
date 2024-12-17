@@ -1,0 +1,172 @@
+[
+    {
+      "crop": "Wheat",
+      "timeline": [
+        { "display": "Day 0, Prepare soil and sow seeds" },
+        { "display": "Day 15, Irrigate field lightly" },
+        { "display": "Day 30, Apply nitrogen fertilizer" },
+        { "display": "Day 45, Weed control" },
+        { "display": "Day 60, Monitor for diseases" },
+        { "display": "Day 75, Continue irrigation" },
+        { "display": "Day 90, Apply second round of fertilizer" },
+        { "display": "Day 105, Check for pests" },
+        { "display": "Day 120, Prepare for harvest" }
+      ]
+    },
+    {
+      "crop": "Rice",
+      "timeline": [
+        { "display": "Day 0, Prepare field and transplant seedlings" },
+        { "display": "Day 15, Monitor for pests" },
+        { "display": "Day 30, Apply first round of fertilizers" },
+        { "display": "Day 45, Weed control" },
+        { "display": "Day 60, Irrigate regularly" },
+        { "display": "Day 75, Monitor for diseases" },
+        { "display": "Day 90, Second round of fertilizers" },
+        { "display": "Day 105, Check for pests and diseases" },
+        { "display": "Day 120, Prepare for harvest" }
+      ]
+    },
+    {
+      "crop": "Corn",
+      "timeline": [
+        { "display": "Day 0, Prepare soil and plant seeds" },
+        { "display": "Day 15, Water the crops" },
+        { "display": "Day 30, Apply nitrogen fertilizer" },
+        { "display": "Day 45, Weed control" },
+        { "display": "Day 60, Monitor for diseases" },
+        { "display": "Day 75, Second round of irrigation" },
+        { "display": "Day 90, Apply additional fertilizers" },
+        { "display": "Day 105, Check for pests" },
+        { "display": "Day 120, Prepare for harvest" }
+      ]
+    },
+    {
+      "crop": "Sugarcane",
+      "timeline": [
+        { "display": "Day 0, Prepare soil and plant cuttings" },
+        { "display": "Day , Irrigate regularly" },
+        { "display": "Day 30, Apply first round of fertilizers" },
+        { "display": "Day 45, Weed control" },
+        { "display": "Day 60, Monitor for pests" },
+        { "display": "Day 75, Second round of irrigation" },
+        { "display": "Day 90, Apply second round of fertilizers" },
+        { "display": "Day 105, Monitor for diseases" },
+        { "display": "Day 120, Prepare for harvest" },
+        { "display": "Day 135, Check for pests and diseases" },
+        { "display": "Day , Final irrigation before harvest" }
+      ]
+    },
+    {
+      "crop": "Potato",
+      "timeline": [
+        { "display": "Day 0, Prepare soil and plant tubers" },
+        { "display": "Day 15, Monitor for pests" },
+        { "display": "Day 30, Apply nitrogen fertilizer" },
+        { "display": "Day 45, Weed control" },
+        { "display": "Day 60, Check for diseases" },
+        { "display": "Day 75, Water regularly" },
+        { "display": "Day 90, Apply second round of fertilizers" },
+        { "display": "Day 105, Check for pests" },
+        { "display": "Day 120, Prepare for harvest" }
+      ]
+    },
+    {
+      "crop": "Onion",
+      "timeline": [
+        { "display": "Day 0, Prepare soil and plant seeds" },
+        { "display": "Day 15, Monitor for pests" },
+        { "display": "Day 30, Weed control" },
+        { "display": "Day 45, Irrigate regularly" },
+        { "display": "Day 60, Apply nitrogen fertilizer" },
+        { "display": "Day 75, Monitor for diseases" },
+        { "display": "Day 90, Apply second round of fertilizer" },
+        { "display": "Day 105, Check for pests" },
+        { "display": "Day 120, Prepare for harvest" }
+      ]
+    },
+    {
+      "crop": "Cucumber",
+      "timeline": [
+        { "display": "Day 0, Prepare soil and sow seeds" },
+        { "display": "Day 15, Water the crops" },
+        { "display": "Day , Apply first round of fertilizers" },
+        { "display": "Day 45, Weed control" },
+        { "display": "Day 60, Monitor for pests" },
+        { "display": "Day 75, Check for diseases" },
+        { "display": "Day 90, Second round of fertilizers" },
+        { "display": "Day 105, Prepare for harvest" }
+      ]
+    },
+    {
+      "crop": "Grapes",
+      "timeline": [
+        { "display": "Day 0, Prepare soil and plant vines" },
+        { "display": "Day 15, Water regularly" },
+        { "display": "Day 30, Apply first round of fertilizers" },
+        { "display": "Day 45, Monitor for diseases" },
+        { "display": "Day 60, Weed control" },
+        { "display": "Day 75, Second round of irrigation" },
+        { "display": "Day 90, Check for pests" },
+        { "display": "Day 105, Apply second round of fertilizer" },
+        { "display": "Day 120, Prepare for harvest" },
+        { "display": "Day 135, Monitor for ripeness" }
+      ]
+    },
+    {
+      "crop": "Cotton",
+      "timeline": [
+        { "display": "Day 0, Prepare soil and plant seeds" },
+        { "display": "Day 15, Monitor for pests" },
+        { "display": "Day 30, Apply nitrogen fertilizer" },
+        { "display": "Day 45, Weed control" },
+        { "display": "Day 60, Irrigate regularly" },
+        { "display": "Day 75, Check for diseases" },
+        { "display": "Day 90, Apply second round of fertilizers" },
+        { "display": "Day 105, Monitor for pests" },
+        { "display": "Day 120, Prepare for harvest" }
+      ]
+    },
+    {
+      "crop": "Mustard",
+      "timeline": [
+        { "display": "Day 0, Prepare soil and sow seeds" },
+        { "display": "Day 15, Irrigate field lightly" },
+        { "display": "Day 30, Apply nitrogen fertilizer" },
+        { "display": "Day 45, Weed control" },
+        { "display": "Day 60, Monitor for diseases" },
+        { "display": "Day 75, Check for pests" },
+        { "display": "Day 90, Apply second round of fertilizer" },
+        { "display": "Day 105, Prepare for harvest" }
+      ]
+    },
+    {
+      "crop": "Sunflower",
+      "timeline": [
+        { "display": "Day 0, Prepare soil and sow seeds" },
+        { "display": "Day 15, Water the crops" },
+        { "display": "Day 30, Apply first round of fertilizers" },
+        { "display": "Day 45, Weed control" },
+        { "display": "Day 60, Check for diseases" },
+        { "display": "Day 75, Irrigate regularly" },
+        { "display": "Day 90, Apply second round of fertilizer" },
+        { "display": "Day 105, Check for pests" },
+        { "display": "Day 120, Prepare for harvest" }
+      ]
+    },
+    {
+      "crop": "Jasmine",
+      "timeline": [
+        { "display": "Day 0, Prepare soil and plant seedlings" },
+        { "display": "Day 15, Water the plants" },
+        { "display": "Day 30, Apply first round of fertilizers" },
+        { "display": "Day 45, Weed control" },
+        { "display": "Day 60, Monitor for pests" },
+        { "display": "Day 75, Irrigate regularly" },
+        { "display": "Day 90, Check for diseases" },
+        { "display": "Day 105, Apply second round of fertilizer" },
+        { "display": "Day 120, Prepare for harvest" }
+      ]
+    }
+  ]
+  
