@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crop Selection</title>
+  <style>
+    /* Reset and base styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #4CAF50, #8BC34A);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #333;
+      flex-direction: column;
+    }
+    h1 {
+      font-size: 2.5rem;
+      color: #fff;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin-top: 20px;
+      padding: 0 20px;
+      width: 100%;
+    }
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      padding: 20px;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .card img {
+      max-width: 100%;
+      border-radius: 6px;
+      margin-bottom: 15px;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+    }
+    .card h2 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: #333;
+    }
+    .card p {
+      font-size: 1rem;
+      color: #666;
+    }
+    .btn {
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .btn:hover {
+      background-color: #45a049;
+    }
+    footer {
+      margin-top: 20px;
+      font-size: 0.9rem;
+      color: #eee;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Select Your Crop</h1>
+
+  <div class="container">
+    <!-- Card for Wheat -->
+    <div class="card" id="wheatCard">
+      <img src="wheat.jpg" alt="Wheat Image">
+      <h2>Wheat</h2>
+      <p>Wheat is a staple crop used for producing flour and bread.</p>
+      <button class="btn">Select</button>
+    </div>
+
+    <!-- Card for Rice -->
+    <div class="card" id="riceCard">
+      <img src="rice.jpg" alt="Rice Image">
+      <h2>Rice</h2>
+      <p>Rice is the most widely consumed staple food, grown in waterlogged fields.</p>
+      <button class="btn">Select</button>
+    </div>
+
+    <!-- Card for Corn -->
+    <div class="card" id="cornCard">
+      <img src="corn.jpg" alt="Corn Image">
+      <h2>Corn</h2>
+      <p>Corn is used as food, animal feed, and for industrial products.</p>
+      <button class="btn">Select</button>
+    </div>
+
+    <!-- Card for Sugarcane -->
+    <div class="card" id="sugarcaneCard">
+      <img src="sugarcane.jpg" alt="Sugarcane Image">
+      <h2>Sugarcane</h2>
+      <p>Sugarcane is primarily grown for sugar and biofuel production.</p>
+      <button class="btn">Select</button>
+    </div>
+
+    <!-- Card for Potato -->
+    <div class="card" id="potatoCard">
+      <img src="potato.jpg" alt="Potato Image">
+      <h2>Potato</h2>
+      <p>Potato is a versatile crop used in many culinary dishes worldwide.</p>
+      <button class="btn">Select</button>
+    </div>
+
+    <!-- Card for Onion -->
+    <div class="card" id="onionCard">
+      <img src="onion.jpg" alt="Onion Image">
+      <h2>Onion</h2>
+      <p>Onions are a common vegetable used for flavoring food in various cuisines.</p>
+      <button class="btn">Select</button>
+    </div>
+
+    <!-- Card for Cucumber -->
+    <div class="card" id="cucumberCard">
+      <img src="cucumber.jpg" alt="Cucumber Image">
+      <h2>Cucumber</h2>
+      <p>Cucumber is a refreshing vegetable often used in salads and pickles.</p>
+      <button class="btn">Select</button>
+    </div>
+
+    <!-- Card for Sunflower -->
+    <div class="card" id="sunflowerCard">
+      <img src="sunflower.jpg" alt="Sunflower Image">
+      <h2>Sunflower</h2>
+      <p>Sunflower is grown for its seeds and oil, and it’s also an ornamental plant.</p>
+      <button class="btn">Select</button>
+    </div>
+
+    <!-- Card for Grapes -->
+    <div class="card" id="grapesCard">
+      <img src="grapes.jpg" alt="Grapes Image">
+      <h2>Grapes</h2>
+      <p>Grapes are cultivated for fresh consumption and wine production.</p>
+      <button class="btn">Select</button>
+    </div>
+
+  </div>
+
+  <footer>Plan your crops efficiently with us!</footer>
+
+  <script>
+    // Add event listeners to each card
+    document.getElementById('wheatCard').addEventListener('click', function () {
+      window.location.href = 'sowing.html?crop=Wheat';
+    });
+    document.getElementById('riceCard').addEventListener('click', function () {
+      window.location.href = 'sowing.html?crop=Rice';
+    });
+    document.getElementById('cornCard').addEventListener('click', function () {
+      window.location.href = 'sowing.html?crop=Corn';
+    });
+    document.getElementById('sugarcaneCard').addEventListener('click', function () {
+      window.location.href = 'sowing.html?crop=Sugarcane';
+    });
+    document.getElementById('potatoCard').addEventListener('click', function () {
+      window.location.href = 'sowing.html?crop=Potato';
+    });
+    document.getElementById('onionCard').addEventListener('click', function () {
+      window.location.href = 'sowing.html?crop=Onion';
+    });
+    document.getElementById('cucumberCard').addEventListener('click', function () {
+      window.location.href = 'sowing.html?crop=Cucumber';
+    });
+    document.getElementById('sunflowerCard').addEventListener('click', function () {
+      window.location.href = 'sowing.html?crop=Sunflower';
+    });
+    document.getElementById('grapesCard').addEventListener('click', function () {
+      window.location.href = 'sowing.html?crop=Grapes';
+    });
+  </script>
+
+</body>
+</html>
