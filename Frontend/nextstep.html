@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crop Growth Timeline</title>
+  <link rel="stylesheet" href="nextstep.css">
+</head>
+<body>
+    <header>
+        <h1>Crop Growth Timeline</h1>
+        <p id="cropDetails">Loading details...</p>
+    
+        <!-- Add two buttons for navigation -->
+        <div class="header-buttons">
+          <a href="homepage.html" class="header-button">Home</a>
+          <a href="cropselect.html" class="header-button">Crop Select</a>
+        </div>
+      </header>
+
+  <main>
+    <div class="timeline-container">
+      <div class="timeline" id="timeline"></div>
+    </div>
+  </main>
+
+  <footer>
+    <p>Plan your crops effectively with our tools!</p>
+    <!-- AI Chatbot Button -->
+    <div class="chatbot-container">
+      <p>If you have any questions, feel free to ask our AI Chatbot!</p>
+      <a href="https://cdn.botpress.cloud/webchat/v2.2/shareable.html?configUrl=https://files.bpcontent.cloud/2024/12/14/12/20241214123610-725Y0SL8.json" class="chatbot-btn">Ask a Question</a>
+    </div>
+  </footer>
+  <script>
+    
+
+// Fetch crop and sowing date from URL
+const urlParams = new URLSearchParams(window.location.search);
+const crop = urlParams.get('crop');
+const sowingDate = new Date(urlParams.get('sowingDate')); // Assuming sowing date passed as 'sowingDate' in YYYY-MM-DD format
+
+// Crop timeline data
+const cropTimelineData = {
+  Wheat: [
+    { day: 0, task: "Prepare soil and sow seeds" },
+    { day: 15, task: "Irrigate field lightly" },
+    { day: 30, task: "Apply nitrogen fertilizer" },
+    { day: 45, task: "Weed control" },
+    { day: 60, task: "Monitor for diseases" },
+    { day: 75, task: "Continue irrigation" },
+    { day: 90, task: "Apply second round of fertilizer" },
+    { day: 120, task: "Prepare for harvest" },
+  ],
+  Rice: [
+    { day: 0, task: "Prepare field and transplant seedlings" },
+    { day: 15, task: "Monitor for pests" },
+    { day: 30, task: "Apply first round of fertilizers" },
+    { day: 45, task: "Weed control" },
+    { day: 60, task: "Irrigate regularly" },
+    { day: 90, task: "Second round of fertilizers" },
+    { day: 120, task: "Prepare for harvest" },
+  ],
+  Corn: [
+    { day: 0, task: "Prepare soil and plant seeds" },
+    { day: 15, task: "Water the crops" },
+    { day: 30, task: "Apply nitrogen fertilizer" },
+    { day: 45, task: "Weed control" },
+    { day: 60, task: "Monitor for diseases" },
+    { day: 90, task: "Apply additional fertilizers" },
+    { day: 120, task: "Prepare for harvest" },
+  ],
+  Sugarcane: [
+    { day: 0, task: "Prepare soil and plant sugarcane" },
+    { day: 30, task: "Fertilize and irrigate" },
+    { day: 60, task: "Weed control" },
+    { day: 120, task: "Irrigate regularly" },
+    { day: 180, task: "Harvest" },
+  ],
+  Potato: [
+    { day: 0, task: "Prepare soil and plant potatoes" },
+    { day: 15, task: "Water the crops" },
+    { day: 30, task: "Apply nitrogen fertilizer" },
+    { day: 45, task: "Weed control" },
+    { day: 75, task: "Harvest" },
+  ],
+  Onion: [
+    { day: 0, task: "Prepare soil and transplant onion seedlings" },
+    { day: 15, task: "Irrigate regularly" },
+    { day: 30, task: "Apply fertilizers" },
+    { day: 45, task: "Weed control" },
+    { day: 90, task: "Harvest" },
+  ],
+  Cucumber: [
+    { day: 0, task: "Prepare soil and sow seeds" },
+    { day: 15, task: "Water regularly" },
+    { day: 30, task: "Apply fertilizers" },
+    { day: 45, task: "Weed control" },
+    { day: 75, task: "Harvest" },
+  ],
+  Sunflower: [
+    { day: 0, task: "Prepare soil and plant seeds" },
+    { day: 15, task: "Water regularly" },
+    { day: 30, task: "Apply fertilizers" },
+    { day: 45, task: "Weed control" },
+    { day: 75, task: "Harvest" },
+  ],
+  Grapes: [
+    { day: 0, task: "Plant grapevines" },
+    { day: 30, task: "Irrigate regularly" },
+    { day: 60, task: "Apply fertilizers" },
+    { day: 120, task: "Check for pests" },
+    { day: 150, task: "Harvest" },
+  ],
+};
+
+// Populate timeline
+function populateTimeline() {
+  const timelineData = cropTimelineData[crop];
+  if (!timelineData) {
+    document.getElementById('cropDetails').innerText = "No timeline data available for the selected crop.";
+    return;
+  }
+
+  // Update crop details
+  document.getElementById('cropDetails').innerText = `Crop: ${crop} | Sowing Date: ${sowingDate.toDateString()}`;
+
+  const timeline = document.getElementById('timeline');
+  timeline.innerHTML = timelineData.map(entry => {
+    const taskDate = new Date(sowingDate);
+    taskDate.setDate(taskDate.getDate() + entry.day);
+    return `
+      <div class="timeline-item">
+        <div class="timeline-date">${taskDate.toDateString()}</div>
+        <div class="timeline-content">
+          <p>${entry.task}</p>
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+// Initialize timeline
+populateTimeline();
+
+  </script>
+
+</body>
+</html>

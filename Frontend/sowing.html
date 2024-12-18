@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sowing Date and Crop Info</title>
+  <link rel="stylesheet" href="sowing.css">
+</head>
+<body>
+
+  <h1 id="cropTitle">Sowing Date and Crop Info</h1>
+
+  <div class="container">
+    <!-- Sowing Date Input -->
+    <label for="sowingDate">Select Sowing Date:</label>
+    <input type="date" id="sowingDate">
+
+    <!-- Crop Info Section -->
+    <div class="crop-info" id="cropInfo">
+      <!-- Crop details and timeline will be shown here -->
+    </div>
+
+    <button class="btn" id="nextStepBtn">Next Step</button>
+  </div>
+
+  <footer>Plan your crops efficiently with us!</footer>
+
+  <script>
+    // Fetch the selected crop from the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const crop = urlParams.get('crop');
+
+    // Fetch the crop details and timeline from the provided JSON
+    const cropDetails = [
+      {
+        "crop": "Wheat",
+        "soil": "Loamy soil",
+        "timeToHarvest": "4 months",
+        "bestSeason": "Rabi",
+        "tools": ["Plough", "Seed drill"],
+        "fertilizers": ["Urea", "DAP"],
+        "description": "Wheat is a staple crop used for producing flour and bread."
+      },
+      {
+        "crop": "Rice",
+        "soil": "Clayey soil with good water retention",
+        "timeToHarvest": "4-5 months",
+        "bestSeason": "Kharif",
+        "tools": ["Transplanter", "Harvesting sickle"],
+        "fertilizers": ["Ammonium sulfate", "Potassium chloride"],
+        "description": "Rice is the most widely consumed staple food, grown in waterlogged fields."
+      },
+      {
+        "crop": "Corn",
+        "soil": "Well-drained sandy loam",
+        "timeToHarvest": "3-4 months",
+        "bestSeason": "Kharif",
+        "tools": ["Planter", "Combine harvester"],
+        "fertilizers": ["Nitrogen-rich fertilizers", "Phosphate"],
+        "description": "Corn is used as food, animal feed, and for industrial products."
+      },
+      {
+        "crop": "Sugarcane",
+        "soil": "Well-drained, fertile soil",
+        "timeToHarvest": "12-18 months",
+        "bestSeason": "All-season",
+        "tools": ["Plough", "Harvester"],
+        "fertilizers": ["Urea", "Potassium chloride"],
+        "description": "Sugarcane is used for producing sugar and biofuels."
+      },
+      {
+        "crop": "Potato",
+        "soil": "Well-drained sandy loam",
+        "timeToHarvest": "3 months",
+        "bestSeason": "Kharif",
+        "tools": ["Plough", "Planter"],
+        "fertilizers": ["Ammonium sulfate", "Potassium nitrate"],
+        "description": "Potatoes are a staple food and are grown globally."
+      },
+      {
+        "crop": "Onion",
+        "soil": "Loamy, well-drained soil",
+        "timeToHarvest": "4-5 months",
+        "bestSeason": "Rabi",
+        "tools": ["Plough", "Transplanter"],
+        "fertilizers": ["Urea", "Superphosphate"],
+        "description": "Onions are widely used for seasoning and culinary dishes."
+      },
+      {
+        "crop": "Cucumber",
+        "soil": "Sandy, well-drained soil",
+        "timeToHarvest": "2-3 months",
+        "bestSeason": "Summer",
+        "tools": ["Hand planter", "Weeder"],
+        "fertilizers": ["Ammonium nitrate", "Phosphate"],
+        "description": "Cucumbers are refreshing vegetables grown in warm weather."
+      },
+      {
+        "crop": "Sunflower",
+        "soil": "Well-drained sandy loam",
+        "timeToHarvest": "3-4 months",
+        "bestSeason": "Summer",
+        "tools": ["Seeder", "Combine harvester"],
+        "fertilizers": ["Phosphate", "Potassium sulfate"],
+        "description": "Sunflowers are grown for their seeds and oil production."
+      },
+      {
+        "crop": "Grapes",
+        "soil": "Well-drained loamy soil",
+        "timeToHarvest": "4-5 months",
+        "bestSeason": "Summer",
+        "tools": ["Trellis", "Vine cutter"],
+        "fertilizers": ["Urea", "Superphosphate"],
+        "description": "Grapes are grown for fresh consumption and wine production."
+      }
+    ];
+
+    const cropTimeline = [
+      {
+        "crop": "Wheat",
+        "timeline": [
+          { "display": "Day 0, Prepare soil and sow seeds" },
+          { "display": "Day 15, Irrigate field lightly" },
+          { "display": "Day 30, Apply nitrogen fertilizer" },
+          { "display": "Day 45, Weed control" },
+          { "display": "Day 60, Monitor for diseases" },
+          { "display": "Day 75, Continue irrigation" },
+          { "display": "Day 90, Apply second round of fertilizer" },
+          { "display": "Day 105, Check for pests" },
+          { "display": "Day 120, Prepare for harvest" }
+        ]
+      },
+      {
+        "crop": "Rice",
+        "timeline": [
+          { "display": "Day 0, Prepare field and transplant seedlings" },
+          { "display": "Day 15, Monitor for pests" },
+          { "display": "Day 30, Apply first round of fertilizers" },
+          { "display": "Day 45, Weed control" },
+          { "display": "Day 60, Irrigate regularly" },
+          { "display": "Day 75, Monitor for diseases" },
+          { "display": "Day 90, Second round of fertilizers" },
+          { "display": "Day 105, Check for pests and diseases" },
+          { "display": "Day 120, Prepare for harvest" }
+        ]
+      },
+      {
+        "crop": "Corn",
+        "timeline": [
+          { "display": "Day 0, Prepare soil and plant seeds" },
+          { "display": "Day 15, Water the crops" },
+          { "display": "Day 30, Apply nitrogen fertilizer" },
+          { "display": "Day 45, Weed control" },
+          { "display": "Day 60, Monitor for diseases" },
+          { "display": "Day 75, Second round of irrigation" },
+          { "display": "Day 90, Apply additional fertilizers" },
+          { "display": "Day 105, Check for pests" },
+          { "display": "Day 120, Prepare for harvest" }
+        ]
+      },
+      {
+        "crop": "Sugarcane",
+        "timeline": [
+          { "display": "Day 0, Prepare soil and plant sugarcane" },
+          { "display": "Day 30, Fertilize and irrigate" },
+          { "display": "Day 60, Weed control" },
+          { "display": "Day 90, Monitor growth" },
+          { "display": "Day 120, Irrigate regularly" },
+          { "display": "Day 150, Continue fertilizer application" },
+          { "display": "Day 180, Harvest" }
+        ]
+      },
+      {
+        "crop": "Potato",
+        "timeline": [
+          { "display": "Day 0, Prepare soil and plant potatoes" },
+          { "display": "Day 15, Water the crops" },
+          { "display": "Day 30, Apply nitrogen fertilizer" },
+          { "display": "Day 45, Weed control" },
+          { "display": "Day 60, Monitor for diseases" },
+          { "display": "Day 75, Second round of irrigation" },
+          { "display": "Day 90, Harvest" }
+        ]
+      },
+      {
+        "crop": "Onion",
+        "timeline": [
+          { "display": "Day 0, Prepare soil and transplant onion seedlings" },
+          { "display": "Day 15, Irrigate regularly" },
+          { "display": "Day 30, Apply fertilizers" },
+          { "display": "Day 45, Weed control" },
+          { "display": "Day 60, Monitor for pests" },
+          { "display": "Day 75, Check for diseases" },
+          { "display": "Day 90, Harvest" }
+        ]
+      },
+      {
+        "crop": "Cucumber",
+        "timeline": [
+          { "display": "Day 0, Prepare soil and sow seeds" },
+          { "display": "Day 15, Water regularly" },
+          { "display": "Day 30, Apply fertilizers" },
+          { "display": "Day 45, Weed control" },
+          { "display": "Day 60, Monitor growth" },
+          { "display": "Day 75, Harvest" }
+        ]
+      },
+      {
+        "crop": "Sunflower",
+        "timeline": [
+          { "display": "Day 0, Prepare soil and plant seeds" },
+          { "display": "Day 15, Water regularly" },
+          { "display": "Day 30, Apply fertilizers" },
+          { "display": "Day 45, Weed control" },
+          { "display": "Day 60, Monitor growth" },
+          { "display": "Day 75, Harvest" }
+        ]
+      },
+      {
+        "crop": "Grapes",
+        "timeline": [
+          { "display": "Day 0, Plant grapevines" },
+          { "display": "Day 30, Irrigate regularly" },
+          { "display": "Day 60, Apply fertilizers" },
+          { "display": "Day 90, Monitor growth" },
+          { "display": "Day 120, Check for pests" },
+          { "display": "Day 150, Harvest" }
+        ]
+      }
+    ];
+
+    // Find the selected crop details and timeline
+    const selectedCropDetails = cropDetails.find(item => item.crop === crop);
+    const selectedCropTimeline = cropTimeline.find(item => item.crop === crop);
+
+    // Display the crop information and timeline
+    if (selectedCropDetails) {
+      document.getElementById('cropTitle').innerText = `${crop} - Sowing Date and Info`;
+      document.getElementById('cropInfo').innerHTML = `
+        <p><strong>Soil Type:</strong> ${selectedCropDetails.soil}</p>
+        <p><strong>Time to Harvest:</strong> ${selectedCropDetails.timeToHarvest}</p>
+        <p><strong>Best Season:</strong> ${selectedCropDetails.bestSeason}</p>
+        <p><strong>Tools Needed:</strong> ${selectedCropDetails.tools.join(', ')}</p>
+        <p><strong>Fertilizers Needed:</strong> ${selectedCropDetails.fertilizers.join(', ')}</p>
+        <p><strong>Description:</strong> ${selectedCropDetails.description}</p>
+        <h3>Timeline:</h3>
+        <ul>
+          ${selectedCropTimeline.timeline.map(item => `<li>${item.display}</li>`).join('')}
+        </ul>
+      `;
+    }
+
+    // Handle the sowing date input and proceed to the next step
+    document.getElementById('nextStepBtn').addEventListener('click', function () {
+  const sowingDate = document.getElementById('sowingDate').value;
+  if (!sowingDate) {
+    alert('Please select a sowing date.');
+    return;
+  }
+
+  // Redirect to nextstep.html with sowing date and crop as URL parameters
+  const urlParams = new URLSearchParams({ crop, sowingDate });
+  window.location.href = `nextstep.html?${urlParams.toString()}`;
+});
+  </script>
+
+
+</body>
+</html>

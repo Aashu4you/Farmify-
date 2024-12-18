@@ -1,0 +1,223 @@
+/* sowing.css */
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(120deg, #8BC34A, #4CAF50);
+    min-height: 100vh;
+    overflow-x: hidden;
+    color: #333;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    animation: gradientMove 8s infinite alternate linear;
+  }
+  
+  /* Gradient Animation */
+  @keyframes gradientMove {
+    0% {
+      background: linear-gradient(120deg, #8BC34A, #4CAF50);
+    }
+    50% {
+      background: linear-gradient(120deg, #6FBF73, #4CAF50);
+    }
+    100% {
+      background: linear-gradient(120deg, #4CAF50, #8BC34A);
+    }
+  }
+  
+  /* Container Styling */
+  .container {
+    background: #ffffff;
+    width: 100%;
+    max-width: 800px;
+    border-radius: 16px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    overflow-y: auto;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Header Styling */
+  h1 {
+    font-size: 3rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-align: center;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    animation: fadeInDown 1s ease;
+  }
+  
+  label {
+    font-size: 1.3rem;
+    color: #4CAF50;
+    font-weight: 600;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  
+  input[type="date"] {
+    padding: 12px;
+    font-size: 1.1rem;
+    width: 100%;
+    border: 2px solid #4CAF50;
+    border-radius: 6px;
+    outline: none;
+    transition: all 0.3s ease;
+    background: #f9f9f9;
+  }
+  
+  input[type="date"]:focus {
+    border-color: #8BC34A;
+    box-shadow: 0 0 8px rgba(139, 195, 74, 0.5);
+    background: #ffffff;
+  }
+  
+  /* Crop Info Styling */
+  .crop-info {
+    margin-top: 30px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+  }
+  
+  .crop-info .card {
+    background: #f7f7f7;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .crop-info .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .crop-info h3 {
+    font-size: 1.6rem;
+    color: #4CAF50;
+    margin-bottom: 10px;
+  }
+  
+  .crop-info ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .crop-info ul li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+  }
+  
+  .crop-info ul li::before {
+    content: '✓';
+    color: #4CAF50;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.2rem;
+  }
+  
+  /* Button Styling */
+  .btn {
+    margin-top: 25px;
+    padding: 14px 40px;
+    background: linear-gradient(120deg, #4CAF50, #8BC34A);
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.4s ease, transform 0.3s ease;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .btn:hover {
+    background: linear-gradient(120deg, #8BC34A, #4CAF50);
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Footer Styling */
+  footer {
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #eee;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1.5s ease;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2.5rem;
+    }
+  
+    .container {
+      padding: 20px;
+    }
+  
+    label {
+      font-size: 1rem;
+    }
+  
+    input[type="date"] {
+      font-size: 1rem;
+    }
+  
+    .crop-info {
+      font-size: 1rem;
+    }
+  
+    .btn {
+      font-size: 1rem;
+      padding: 12px 30px;
+    }
+  }
+  
